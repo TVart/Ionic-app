@@ -1,0 +1,22 @@
+<ion-view view-title="Code de la route">
+  <ion-content class="padding">
+    <h2>Prenez en main votre formation</h2>
+    <ion-item href="#/tab/chats">Passz la vitesse supérieure &
+      Obtenez le code de la route!<br/>
+      <img ng-src="{{start}}">
+    </ion-item>
+    <h2>Rejoins la communauté</h2>
+    <p>
+      Intéragi et pose toutes les questions sur<br/>
+      les réseau sociaux!
+      <ion-list>
+        <ion-item
+                ng-repeat="socnet in socnets"
+                type="item-text-wrap"
+                href="{{socnet.url}}">
+          <img ng-src="{{socnet.logo}}">
+        </ion-item>
+      </ion-list>
+    </p>
+  </ion-content>
+</ion-view>

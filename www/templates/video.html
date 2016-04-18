@@ -1,0 +1,13 @@
+<ion-view view-title="Video">
+  <ion-content>
+    <ion-list>
+      <iframe src="{{q}}" frameborder="0" width="560" height="315"></iframe>
+    <ion-toggle  ng-model="settings.enableFriends">
+        Montrer la réponse
+    </ion-toggle>
+      <div class="video-container" ng-if="settings.enableFriends">
+        <iframe src="{{r}}" frameborder="0" width="560" height="315"></iframe>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
