@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['youtube-embed'])
 
 .controller('DashCtrl', function($scope,Home) {
   $scope.start='img/start.jpg';

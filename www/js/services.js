@@ -1,19 +1,20 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['youtube-embed'])
 
 .factory('Home', function() {
       var socnets = [
         {
           'logo': 'img/youtube-black.jpg',
-          'url': 'http://youtube.com',
+          'url': 'https://www.youtube.com/channel/UCynH9O3PG4YqqoDzUZw8tOw',
         },
         {
           'logo': 'img/facebook.png',
-          'url': 'http://youtube.com',
-        },
+          'url': 'https://www.facebook.com/Code-de-la-route-134819859894197/?fref=ts',
+        }
+        /*,
         {
           'logo': 'img/twitter.png',
           'url': 'http://youtube.com',
-        }
+        }*/
       ];
       return {
         all: function () {
@@ -28,18 +29,65 @@ angular.module('starter.services', [])
   var playlists = [
     {
     id: 0,
-    name: 'Générique',
-    lastText: 'You on your way?',
+    name: 'Série 1',
+    lastText: 'Route, Autoroute',
     face: 'img/ben.png',
-    videos:[{
-        id:0,
-        q:"http://www.youtube.com/embed/_zTpoJlNRAQ?rel=0",
-        r:"http://www.youtube.com/embed/B8sKV6b-_88?rel=0"
-      },
+    videos:[
       {
+        id:0,
+        q:"Q_o0SsqzeSk",
+        r:"B8sKV6b-_88",
+        title:'Route prioritaire'
+      },{
         id:1,
-        q:"refx1",
-        r:"refx2"
+        q:"EoOlQ6dAN_Q",
+        r:"B8sKV6b-_88",
+        title:'Limitation de vitesse'
+      },{
+        id:2,
+        q:"yQeV_A98J4E",
+        r:"B8sKV6b-_88",
+        title:'Distance de sécurité, Tunnel'
+      },{
+        id:3,
+        q:"Hc3ZJ52FxTk",
+        r:"B8sKV6b-_88",
+        title:'Route prioritaire'
+      },{
+        id:4,
+        q:"xM97QcZ2cDo",
+        r:"B8sKV6b-_88",
+        title:'Conduire dans Agglomération éclairée'
+      },{
+        id:5,
+        q:"k8cvPFycf6Q",
+        r:"B8sKV6b-_88",
+        title:'Placement'
+      },{
+        id:6,
+        q:"n38vSQ4QRDU",
+        r:"B8sKV6b-_88",
+        title:'Arrêt, Stationnement'
+      },{
+        id:7,
+        q:"eIvjGONVH-k",
+        r:"B8sKV6b-_88",
+        title:'Dépassement'
+      },{
+        id:7,
+        q:"XfwbkCTxTDo",
+        r:"B8sKV6b-_88",
+        title:'Placement, Choisir la direction'
+      },{
+        id:7,
+        q:"eHmjUYAFtr8",
+        r:"B8sKV6b-_88",
+        title:'Arrêt, Stationnement'
+      },{
+        id:7,
+        q:"tH5UAm89kt8",
+        r:"B8sKV6b-_88",
+        title:'Arrêt, Stationnement'
       }
     ]
   }, {
@@ -47,7 +95,8 @@ angular.module('starter.services', [])
     name: 'Arrêt et Stationnement',
     lastText: 'Hey, it\'s me',
     face: 'img/max.png',
-      videos:[{
+      videos:[
+        {
         id:0,
         q:"refw1",
         r:"refw2"

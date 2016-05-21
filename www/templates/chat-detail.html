@@ -6,17 +6,19 @@
 -->
 <ion-view view-title="{{playlist.name}}">
   <ion-content class="padding">
-    <img ng-src="{{playlist.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{playlist.lastText}}
-      {{playlist.name}}
-    </p>
+    <table>
+      <tr align="center">
+        <td><img ng-src="{{playlist.face}}" style="width: 64px; height: 64px; vertical-align:middle;"></td>
+        <td>&nbsp;{{playlist.name}} | {{playlist.lastText}}</td>
+      </tr>
+    </table>
     <ion-list>
       <ion-item class="item-remove-animate item-icon-right"
                 ng-repeat="video in playlist.videos"
                 type="item-text-wrap"
                 href="#/tab/chats/{{playlist.id}}/video/{{video.id}}">
-        <img ng-src="{{playlist.face}}" style="width: 50px; height: 50px">
+        <img ng-src="{{playlist.face}}" style="width: 50px; height: 50px; vertical-align:middle;">
+        {{video.title}}
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>

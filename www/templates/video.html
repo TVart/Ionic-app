@@ -1,13 +1,19 @@
 <ion-view view-title="Video">
   <ion-content>
     <ion-list>
-      <iframe src="{{q}}" frameborder="0" width="560" height="315"></iframe>
-    <ion-toggle  ng-model="settings.enableFriends">
+    <ion-toggle  ng-if="!settings.enableFriends" ng-model="settings.enableFriends">
         Montrer la réponse
     </ion-toggle>
-      <div class="video-container" ng-if="settings.enableFriends">
-        <iframe src="{{r}}" frameborder="0" width="560" height="315"></iframe>
-      </div>
+    <ion-toggle  ng-if="settings.enableFriends" ng-model="settings.enableFriends">
+        Revenir à la question
+    </ion-toggle>	
+		<div class="embed-responsive embed-responsive-16by9" ng-if="settings.enableFriends">
+            <youtube-video class="embed-responsive-item" video-id="r"></youtube-video>
+            <!--<iframe src="{{r}}" frameborder="0" allowfullscreen></iframe>-->
+		</div>
+		<div class="embed-responsive embed-responsive-16by9" ng-if="!settings.enableFriends">
+			<youtube-video class="embed-responsive-item" video-id="q"></youtube-video>
+		</div>
     </ion-list>
   </ion-content>
 </ion-view>
